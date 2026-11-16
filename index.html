@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite de Diagnóstico Móvil v1.0 | USB Tool</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19; /* Fondo oscuro profundo de bajo brillo */
+            --card-bg: #161e2e;  /* Fondo de tarjetas con contraste seguro */
+            --text-main: #f1f5f9;/* Blanco suave de alta legibilidad */
+            --text-muted: #cbd5e1;/* Gris claro optimizado para evitar fatiga visual */
+            --accent: #38bdf8;   /* Azul cian accesible */
+            --accent-pro: #fb7185; /* Rosa/Rojo suave para destacar sin quemar la vista */
+            --green: #4ade80;    /* Verde claro de alto contraste */
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px 20px 20px;
+            max-width: 800px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            width: 380px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #334155;
+        }
+        .card.pro {
+            border-color: var(--accent-pro);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+        .price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: var(--text-main);
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .features li::before {
+            content: "✔ ";
+            color: var(--green);
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--accent);
+            color: #0b0f19;
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-pro {
+            background-color: var(--accent-pro);
+            color: #0b0f19;
+        }
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Suite de Diagnóstico Móvil v1.0</h1>
+        <p>Herramienta portátil ultrarrápida por USB para técnicos y usuarios. Cero registros en la nube, operando 100% de forma volátil en la memoria RAM.</p>
+    </header>
+
+    <div class="container">
+        <!-- Versión Básica -->
+        <div class="card">
+            <div>
+                <h3>Versión Básica</h3>
+                <div class="price">Gratis</div>
+                <ul class="features">
+                    <li>Lectura instantánea de modelo, Android y serie</li>
+                    <li>Diagnóstico básico de almacenamiento interno y RAM</li>
+                    <li>Evaluación general del estado de batería</li>
+                    <li>100% portable (Sin instalación ni registros)</li>
+                </ul>
+            </div>
+            <a href="Suite_Diagnostico_Movil_v1.exe" class="btn" download>📥 Descargar Gratis</a>
+        </div>
+
+        <!-- Versión Pro -->
+        <div class="card pro">
+            <div>
+                <h3 style="color: var(--accent-pro);">Modo Técnico Pro</h3>
+                <div class="price">$1.00 <span style="font-size: 1rem; color: var(--text-muted);">USD</span></div>
+                <ul class="features">
+                    <li>Ciclos reales de batería y salud por el Kernel</li>
+                    <li>Detección avanzada de estado de Módem (Baseband)</li>
+                    <li>Detección de Root (su) y estado de Bootloader</li>
+                    <li>Limpieza rápida de caché del sistema (pm trim-caches)</li>
+                    <li>Instalador rápido de APKs por USB</li>
+                    <li>Reinicios directos a Recovery / Fastboot</li>
+                    <li>Exportación de Reporte PDF Formal para cliente</li>
+                </ul>
+            </div>
+            <a href="https://paypal.me/TU_USUARIO/1.00USD" target="_blank" class="btn btn-pro">🔒 Comprar Licencia Pro ($1.00)</a>
+        </div>
+    </div>
+
+   <footer>
+        <p>🔒 Privacidad Garantizada: La herramienta no recopila datos personales ni sube información a servidores externos.</p>
+        <p>Software independiente y portable protegido bajo hashes criptográficos SHA-256. Creado por <strong>Ing. Julián Ramírez, Darkness.</strong> © 2026. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
